@@ -1,0 +1,94 @@
+<%= form_with model: parcel, class: 'parcel-form' do |form| %>
+  <div class='parcel-form__field'>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <% parcel.errors.full_messages_for(:title).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+    <% parcel.errors.full_messages_for(:first_name).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+    <% parcel.errors.full_messages_for(:last_name).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :middle_name %>
+    <%= form.text_field :middle_name %>
+    <% parcel.errors.full_messages_for(:middle_name).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+    <% parcel.errors.full_messages_for(:email).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :phone %>
+    <%= form.phone_field :phone %>
+    <% parcel.errors.full_messages_for(:phone).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :weight %>
+    <%= form.number_field :weight %>
+    <% parcel.errors.full_messages_for(:weight).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :length %>
+    <%= form.number_field :length %>
+    <% parcel.errors.full_messages_for(:length).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :width %>
+    <%= form.number_field :width %>
+    <% parcel.errors.full_messages_for(:width).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :height %>
+    <%= form.number_field :height %>
+    <% parcel.errors.full_messages_for(:height).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :origin %>
+    <%= form.text_area :origin %>
+    <% parcel.errors.full_messages_for(:origin).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+  <div class='parcel-form__field'>
+    <%= form.label :destination %>
+    <%= form.text_area :destination %>
+    <% parcel.errors.full_messages_for(:destination).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class='parcel-form__footer'>
+    <%= form.submit class: '' %>
+    <%= link_to 'Back', parcels_path, class:'' %>
+  </div>
+    <% parcel.errors.full_messages_for(:distance).each do |message| %>
+      <div class='error-message'><%= message %></div>
+    <% end %>
+<% end %>

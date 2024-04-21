@@ -1,0 +1,13 @@
+
+<h1 class='align-title'>Parcels List</h1>
+
+<ul class='list'>
+  <% @parcels.each do |parcel|%>
+  <li class="list-item">
+    <%= link_to  parcel.title  , parcel %> 
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "New parcel", new_parcel_path, class: "create-button" %>
+
